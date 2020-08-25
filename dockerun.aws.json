@@ -1,0 +1,30 @@
+{
+  "AWSEBDockerrunVersion":2,
+  "containerDefinitions": [
+    {
+      "name":"web",
+      "image": "roosie/roosie_site",
+      "hostname":"web",
+      "essential": false
+    },
+    {
+      "name":"db",
+      "image": "roosie/db",
+      "hostname":"db",
+      "essential": false
+    },
+    {
+      "name":"nginx",
+      "image": "roosie/nginx",
+      "hostname":"nginx",
+      "essential": true,
+      "portMpappings":[
+        {
+        "hostPort": 80,
+        "containerPort" : 80
+        }
+      ],
+      "links": ["db","web"]
+    }
+  ]
+}

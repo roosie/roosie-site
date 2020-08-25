@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roosevelt Young</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+</head>
+
+
+<body>
+   <div id="container">
+    <div id="sidebar">
+        <img id="roundimg" src="{% static "app/content/picture.jpg" %}" style="width:250px;height:250px;border:0;border-radius: 5px;background: black;"/>
+        <h2>Roosevelt Young</h2>
+          <small>
+            <a href="mailto:roosevelt.young.jr@outlook.com">
+                <i class="fa fa-envelope-o"></i>
+                roosevelt.young.jr@outlook.com
+            </a>
+
+          </small>
+          <p>Software Engineer. Casual Power Lifter, Avid Gamer, and Occasional Binge Reader.</p>
+          <p><a href="https://www.dropbox.com/s/3wi8ao4o8qtx1q1/Roosevelt%20Young%20site.pdf?dl=0">Resume</a><br><a href="https://github.com/roosie">Github</a><br><a href="http://lol-analytics.ycqim2bgtu.us-west-2.elasticbeanstalk.com/">League Analytics</a><br><a href="/#About">About</a><br><a href="/#Projects">Projects</a><br><a href="/#Courses">Courses</a><br><a href="{% url 'books' %}">Books</a><br><a href="{% url 'games' %}">Games</a><br><a href="{% url 'lifts' %}">Lifts</a></p>
+
+    </div>
+    <div id="content">{% block content %}{% endblock %}</div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2><a id="About">About</a></h2>
+<p>I am a Software Engineer with an interest in data engineering and data analytics. I also have a thing for systems and find distributed systems even more entertaining.</p>
+<p>After graduating from Washington State University, I joined the engineering team at Azuqua where I wore several caps to further the dream of automating the world's business processes. I continued to work with the team after the company was successfully acquired by Okta. Currently I'm looking for a great opportunity where I can make an impact in the data world.</p>
+<h2><a id="About">Education</a></h2>
+<h4>Washington State University</h4>
+<p>Bachelor of Science in Computer Science<br>
+Focus in Data Science and Systems & Security. A related Computer Science course history can be found at the bottom of the page.</p>
+<h2><a id="About">Experience</a></h2>
+<h4>Okta | March 2019 - Current </h4>
+<p>Kept existing cloud integrations always on while mentoring new engineers in the Azuqua platform.</p>
+<h4>Azuqua | August 2018 - March 2019 </h4>
+<p>Wore a lot of hats. Develop cloud architecture, gathered requirements from customers, triaged work for other engineers, and plenty of other activities to automate the world's business processes.</p>
+<h2><a id="About">Technologies</a></h2>
+<h4>Languages</h4>
+<p>Experience: Java, Python, C/C++; Familiar: C#, Postgres, JavaScript, Rust; For Fun: ML, Assembly, HTML, CSS, R, Lisp</p>
+<h4>Operating Systems</h4>
+<p>Windows, Linux, MacOS</p>
+<h4>Tools</h4>
+<p>Docker, Kubernetes, Node, IntelliJ, Visual Studio, Atom, Jira, Slack, MS Suite, GSuite, AWS, GCP</p>
+<h2><a id="Projects">Projects</a></h2>
+    <a href="https://github.com/roosie/lol_analytics" target="_blank" class="btn btn-primary btn-large"> League Analytics on Github »</a>
+      <p>A site that displays data pulled from Riot’s API for their widely popular game League of Legends. This project includes script a script to get the data from their RESTful API and put that data into an AWS RDS PostgreSQL backed database. A sql file is included to create the database scheme. The data is viewable from a Python, Dash, Flask website on Elastic Beanstalk which is viewable <a href="http://lol-analytics.ycqim2bgtu.us-west-2.elasticbeanstalk.com/">here</a>. Future work on this project is to create in-depth analytics with scikit-learn.</p>
+    <a href="https://github.com/roosie/roosie-site" target="_blank" class="btn btn-primary btn-large"> roosie-site on Github »</a>
+      <p>This website's source code on github. Implemented using Python and Django. Hosted on AWS EC2.</p>
+    <a href="https://github.com/roosie/PerceptronOCR" target="_blank" class="btn btn-primary btn-large"> PerceptronOCR on Github »</a>
+      <p>A perceptron created using C++ in attempt to differentiate different hand drawn characters. This perceptron is made in two flavors; averaged and voted. Averaged perceptron attempts to determine which character is correct by finding the largest dot product of valid pixels and weights. The voted perceptron works on a similar premise, but each weight only counts as 1 no matter how heavy it is.</p>
+    <a href="https://github.com/roosie/trie/tree/master/trie" target="_blank" class="btn btn-primary btn-large"> Trie on Github »</a>
+        <p>This project is a trie implemented in C# using winforms for the gui. This is a simple project to exemplify the decoupling of front end and backend programming.</p>
+    <a href="https://github.com/roosie/Pagerank-Estimator-in-C" target="_blank"class="btn btn-primary btn-large"> Pagerank Estimator on Github»</a>
+        <p>The input is a directed graph G(V,E) with n vertices and m edges. Vertices represent webpages. Edge (u,v) means there is a hyperlink from webpage u to webpage v (and hence this edge is directed u->v). Starting from every node in the graph, perform a random walk of a user-specified length K. Keep track of how many times the random walks visit each node. The "estimate of pagerank" for a given node u is then given by the number of times u was visited (as part of any random walk) divided by the total visits across all vertices. </p>
+    <a href="https://github.com/roosie/Overwatch-API-To-C-" target="_blank" class="btn btn-primary btn-large"> Overwatch API to C# on Github »</a>
+        <p>This project was created to easily convert the unofficial Overwatch API from JSON Objects into C# objects quickly. A winforms GUI is included to prove that the parser is working correctly and view player stats on the current hero selection pool.</p>
+    <a href="https://www.dropbox.com/s/ayxb7xgpsioh2ns/apriori.py?dl=0" target="_blank" class="btn btn-primary btn-large"> A-Priori Algorithm on Dropbox»</a>
+        <p>This is a script using the A-priori algorithm to find products which are frequently browsed together. The support is fixed to s =100 (i.e., product pairs need to occur together at least 100 times to be considered frequent) and the program returns the top 5 sets of items for itemset sizes 2 and 3. Implemented in Python3. </p>
+
+<a href="https://www.dropbox.com/s/iset97rmcgx3bjd/LyricsEngine.py?dl=0" target="_blank" class="btn btn-primary btn-large"> Lyric Parsing on Dropbox»</a>
+        <p>The input for this program is an artist name. Due to limitations of the Genius API the name has to be typed perfectly. The script will fetch the top 4 songs that the artist is featured in and extract the number of words used and most common words used. Written in python3.</p>
+<h2><a id="Courses">Relevant Courses</a></h2>
+    <p>Spring 2018<br>Operating Sys & Computer Arch<br>Intro to Database Systems<br>Design & Analysis Algorithms<br>Introduction to Data Mining<br>Senior Design II</p>
+    <p>Fall 2017<br>Introduction to Data Science<br>Introduction to Parallel Computing<br>Computer Security<br>Artifical Intelligence<br>Senior Design I</p>
+    <p>Spring 2017<br>Automata and Formal Languages<br>Programming Language Design<br>Systems Programming C/C++<br>Software Design and Architecture</p>
+    <p>Fall 2016<br>Introduction to Object-Oriented Software Principles<br>Software Engineering I<br>Introduction to Computer Architecture</p>
+<p><br><br>©Roosevelt Young | <a href="https://www.dropbox.com/s/3wi8ao4o8qtx1q1/Roosevelt%20Young%20site.pdf?dl=0">Resume</a> <a href="#About">About</a> <a href="#Projects">Projects</a> <a href="#Courses">Courses</a> <a href="{% url 'books' %}">Books</a> <a href="{% url 'games' %}">Games</a> <a href="{% url 'lifts' %}">Lifts</a></p>
+{% endblock %}
